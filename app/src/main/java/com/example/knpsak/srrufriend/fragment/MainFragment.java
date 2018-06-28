@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.knpsak.srrufriend.R;
 
@@ -16,10 +17,26 @@ public class MainFragment extends Fragment{
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        Register Controler
+        // Register Controler
+        TextView textView = getView().findViewById(R.id.txtRegister);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Replace Fragment
+                getActivity()
+                        .getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentMainFragment, new RegisterFragment())
+                        .commit();
+
+
+            }
+        });
 
 
     }   // Main Method
+
 
     @Nullable
     @Override
