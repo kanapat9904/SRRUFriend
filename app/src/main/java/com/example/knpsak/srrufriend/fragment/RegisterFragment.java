@@ -10,22 +10,14 @@ import android.view.ViewGroup;
 
 import com.example.knpsak.srrufriend.R;
 
-public class MainFragment extends Fragment{
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        Register Controler
-
-
-    }   // Main Method
+public class RegisterFragment extends Fragment{
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_regester, container, false);
 
         return view;
     }
-} //Main Class
+}
